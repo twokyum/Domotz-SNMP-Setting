@@ -12,16 +12,20 @@
 <br />
 <p align="center">
   <a href="https://github.com/twokyum/MonIT.git">
-    <img src="images/Domotz_Logo.jpg" alt="DomotzLogo" width="200" height="80">
+    <img src="images/RPI4_Logo.jfif" alt="RPI4LOGO" width="200" height="80">
   </a>
   <a href="https://github.com/twokyum/MonIT.git">
-    <img src="images/RPI4_Logo.jpg" alt="DomotzLogo" width="200" height="80">
+    <img src="images/Domotz_Logo.jfif" alt="DomotzLogo" width="200" height="80">
+  </a>
+  <a href="https://github.com/twokyum/MonIT.git">
+    <img src="images/CACTI_LOGO.png" alt="CactiLogo" width="200" height="80">
   </a>
 
   <h1 align="center">System Monitoring Setup Guideline</h3>
 
   <p align="center">
     <h2 align="center">Network Monitoring with SNMP <br/> & <br/> CT/AC/Temperature Real-Time Monitoring</h2>  
+    
     <!-- <a href="https://github.com/github_username/repo"><strong>Explore the docs »</strong></a>
     <br />
     <br />
@@ -35,7 +39,7 @@
 
 
 
-<!-- TABLE OF CONTENTS -->
+<!-- TABLE OF CONTENTS
 ## Table of Contents
 
 * [About the Project](#about-the-project)
@@ -49,7 +53,7 @@
 * [License](#license)
 * [Contact](#contact)
 * [Acknowledgements](#acknowledgements)
-
+ -->
 
 
 <!-- ABOUT THE PROJECT -->
@@ -59,7 +63,6 @@
 [RPICT3T1_IMG]: images/RPICT3T1_IMG.jpg
 
 This project is your guideline to setup real-time system monitoring & network monitoring. 
-Here's a blank template to get started:
 <!-- **To avoid retyping too much info. Do a search and replace with your text editor for the following:** -->
 
 
@@ -265,6 +268,6 @@ Project Link: [https://github.com/twokyum/MonIT](https://github.com/twokyum/MonI
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
 [product-screenshot]: images/screenshot.png
-[SCT013-IMG]: images/SCT013_IMG.jfif
+<!-- [SCT013-IMG]: images/SCT013_IMG.jfif
 [PRICT7V1_IMG]: images/RPICT7V1_IMG.jfif
-[RPICT3T1_IMG]: images/RPICT3T1_IMG.jpg
+[RPICT3T1_IMG]: images/RPICT3T1_IMG.jpg -->
