@@ -15,7 +15,7 @@
     <img src="images/RPI4_Logo.jfif" alt="RPI4LOGO" width="150" height="80">
   </a>
   <a href="https://github.com/twokyum/MonIT.git">
-    <img src="images/DOMOTZ_LOGO.jfif" alt="DomotzLogo" width="150" height="80">
+    <img src="images/DOMOTZ_LOGO.png" alt="DomotzLogo" width="150" height="80">
   </a>
   <a href="https://github.com/twokyum/MonIT.git">
     <img src="images/CACTI_LOGO.png" alt="CactiLogo" width="150" height="80">
@@ -27,7 +27,7 @@
   <h1 align="center">System Monitoring Setup Guideline</h3>
 
   <p align="center">
-    <h2>** Network Monitoring with SNMP <br/>**CT/AC/Temperature Real-Time Monitoring</h2>  
+    <h2>** Network Monitoring with SNMP <br/>** CT/AC/Temperature Real-Time Monitoring</h2>  
   </br>
   </br>
 <!--     
