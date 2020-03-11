@@ -10,10 +10,6 @@
 *** github_username, repo, twitter_handle, email
 -->
 
-
-
-
-
 <!-- PROJECT SHIELDS -->
 <!--
 *** I'm using markdown "reference style" links for readability.
@@ -22,26 +18,34 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors][contributors-shield]][contributors-url]
+
+<!-- [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+[![LinkedIn][linkedin-shield]][linkedin-url] -->
 
 
 
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/github_username/repo">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/twokyum/MonIT.git">
+    <img src="images/Domotz_Logo.jpg" alt="DomotzLogo" width="200" height="80">
+  </a>
+  <a href="https://github.com/twokyum/MonIT.git">
+    <img src="images/RPI4_Logo.jpg" alt="DomotzLogo" width="200" height="80">
   </a>
 
-  <h3 align="center">YOUR_TITLE</h3>
+  <h3 align="center">System Monitoring Setup Guideline</h3>
 
   <p align="center">
-    YOUR_SHORT_DESCRIPTION
+    Network Monitoring with SNMP 
+    <br />
+    &
+    <br />
+    CT/AC/Temperature Real-Time Monitoring
     <br />
     <a href="https://github.com/github_username/repo"><strong>Explore the docs »</strong></a>
     <br />
