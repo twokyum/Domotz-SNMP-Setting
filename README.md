@@ -113,19 +113,63 @@ sudo apt-get install -y snmp snmp-mibs-downloader
 sudo apt-get update
 sudo apt-get install -y snmpd
 ```
-* Follow following steps to configure your snmp.conf 
+* Configure snmp.conf file 
 ```sh
 # Open SNMP configuration file
 sudo nano /etc/snmp/snmpd.conf
-# 1. Comment [agentAddress udp:127.0.0.1:161]
-# 2. Instead, open [agentAddress udp:161,udp6:[::1]:161]
-# 3. Add [rocommunity public  youripaddress] to allow IPs to collect SNMP values
-# 4. Open [trap2sink   localhost public] for active monitoring
-# 5. Add following line at the end of config file to setup OID for temperature
-#    sensor value [pass .1.3.6.1.2.1.25.1.7.1 /bin/sh /home/pi/Desktop/temp_snmp.sh #    -g]
+
+- Comment [agentAddress udp:127.0.0.1:161]
+- Uncomment [agentAddress udp:161,udp6:[::1]:161]
+- Add [rocommunity public  clientIPaddress] after [rocommunity public  localhost] for full access from the local host
+- Uncomment [trap2sink   localhost public] for active monitoring
+- Add following line at the end of config file to setup OID for sensor value [pass .1.3.6.1.2.1.25.1.7.1 /bin/sh /home/pi/Desktop/temp_snmp.sh -g]
 ```
 
-### <strong>Step 4 - </strong>
+### <strong> Step 4 - Domotz Agent Setup on Raspberry Pi </strong>
+* Create Domotz Agent account at [Domotz Webpage](https://portal.domotz.com/signup?utm_source=domotz&utm_medium=website&utm_campaign=setup-step1). Keep in mind that Domotz Pro subscription only provides 21 days of free trial. 
+* Install Domotz Agent on Raspberry Pi by running the following commands. 
+```sh
+sudo apt-get update && sudo apt-get -y upgrade
+wget https://portal.domotz.com/download/agent_packages/domotz-raspberry-armhf-1.0-2.5.0-2.7.5-b004-0023.deb
+sudo dpkg -i domotz-raspberry-armhf-1.0-2.5.0-2.7.5-b004-0023.deb
+```
+
+
+### <strong> Step 5 - Serial Read Setup & MKDIR for Temp Sensor Value </strong>
+```sh
+sudo raspi-config
+#Select 7 Advanced Options --> A1 Expand Filesystem 
+#Select 5 Interfacing Options --> P6 Serial --> No --> Yes --> OK 
+sudo apt-get update
+#Edit the /boot/config.txt file
+sudo nano /boot/config.txt
+#Add following [dtoverlay=pi3-disable-bt] at the end of the config.txt file.
+sudo systemctl disable hciuart
+sudo apt-get install -y python-serial
+wget lechacal.com/RPICT/tools/lcl-rpict-config.py.zip
+unzip lcl-rpict-config.py.zip
+sudo cp lcl-rpict-config.py /usr/local/bin
+```
+### <strong> Step 6 - MKDIR for Temp Sensor Value </strong>
+```sh
+#Create folder to store temperature.log files
+sudo mkdir /usr/local/bin/Logging_Data
+sudo chmod 777 /usr/local/bin/Logging_Data
+cd /usr/local/bin/Logging_Data
+#Create temperature.log file to store temerature value
+sudo touch temperature.log
+sudo chmod 777 /usr/local/bin/Logging_Data/temperature.log
+sudo reboot & exit
+```
+
+
+### <strong> Step 7 - Cacti Install and Setup</strong>
+```sh
+sudo apt-get update && sudo apt-get -y upgrade
+sudo apt-get install -y cacti
+#Need to setup id and password for Apache, and the same credential will be used when you try to log in Cacti GUI.
+#To access Cacti, open web browser and go to "localhost/cacti"
+```
 
 
 <!-- ### Installation
@@ -147,23 +191,23 @@ npm install
 
 
 
-<!-- USAGE EXAMPLES -->
+<!-- USAGE EXAMPLES
 ## Usage
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+_For more examples, please refer to the [Documentation](https://example.com)_ -->
 
 
 
-<!-- ROADMAP -->
+<!-- ROADMAP
 ## Roadmap
 
 See the [open issues](https://github.com/github_username/repo/issues) for a list of proposed features (and known issues).
 
 
 
-<!-- CONTRIBUTING -->
+CONTRIBUTING
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -176,28 +220,31 @@ Contributions are what make the open source community such an amazing place to b
 
 
 
-<!-- LICENSE -->
+<!-- LICENSE
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
-
-
+ -->
 
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email
+Shawn Park - skp1202@gmail.com 
 
-Project Link: [https://github.com/github_username/repo](https://github.com/github_username/repo)
+Project Link: [https://github.com/twokyum/MonIT](https://github.com/twokyum/MonIT)
 
 
+## References
+* Domotz - https://www.domotz.com/setup.php#step1
+* Cacti - http://resources.intenseschool.com/installing-cacti-on-raspberry-pi/
 
-<!-- ACKNOWLEDGEMENTS -->
+
+<!-- ACKNOWLEDGEMENTS
 ## Acknowledgements
 
 * []()
 * []()
-* []()
+* []() -->
 
 
 
