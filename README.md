@@ -58,35 +58,78 @@
 [PRICT7V1_IMG]: images/RPICT7V1_IMG.jfif
 [RPICT3T1_IMG]: images/RPICT3T1_IMG.jpg
 
-This project is your guideline for real-time system monitoring setup. 
+This project is your guideline to setup real-time system monitoring & network monitoring. 
 Here's a blank template to get started:
 <!-- **To avoid retyping too much info. Do a search and replace with your text editor for the following:** -->
 
 
 ### Built With
 
-* [![RPICT7V1 Module][PRICT7V1_IMG]](http://lechacalshop.com/gb/internetofthing/22-raspberrypi-7x-current-sensor-adaptor-1-voltage-emoncms.html) RPICT7V1 - 7 Current Sensor & 1 AC Sensor 
-* [![RPICT3T1 Module][RPICT3T1_IMG]](http://lechacalshop.com/gb/internetofthing/22-raspberrypi-7x-current-sensor-adaptor-1-voltage-emoncms.html) RPICT3T1 - 3 Current Sensor & 1 Temperature Sensor 
-* [![Current Sensor][SCT013_IMG]](http://lechacalshop.com/gb/internetofthing/16-sct-013-000-with-quality-jack-connector-emoncms-emonwrt.html) SCT013 - Current Sensor 
-
-
-
+<!-- [![RPICT7V1 Module][PRICT7V1_IMG]](http://lechacalshop.com/gb/internetofthing/22-raspberrypi-7x-current-sensor-adaptor-1-voltage-emoncms.html) 
+[![RPICT3T1 Module][RPICT3T1_IMG]](http://lechacalshop.com/gb/internetofthing/22-raspberrypi-7x-current-sensor-adaptor-1-voltage-emoncms.html) 
+[![Current Sensor][SCT013_IMG]](http://lechacalshop.com/gb/internetofthing/16-sct-013-000-with-quality-jack-connector-emoncms-emonwrt.html)   -->
+* [Raspberry Pi 4 4GB](https://www.raspberrypi.org/products/raspberry-pi-4-model-b/)
+* [RPICT7V1 - 7 Current Sensor & 1 AC Sensor](http://lechacalshop.com/gb/internetofthing/22-raspberrypi-7x-current-sensor-adaptor-1-voltage-emoncms.html) 
+* [RPICT3T1 - 3 Current Sensor & 1 Temperature Sensor](http://lechacalshop.com/gb/internetofthing/22-raspberrypi-7x-current-sensor-adaptor-1-voltage-emoncms.html)  
+* [SCT013 - Current Sensor](http://lechacalshop.com/gb/internetofthing/16-sct-013-000-with-quality-jack-connector-emoncms-emonwrt.html)
+* [DS18B20 - Temperature Sensor](https://www.amazon.com/s?k=ds18b20&ref=nb_sb_noss)
+* [77DA-10-09 - Voltage Sensor](http://lechacalshop.com/gb/internetofthing/54-usacac.html)
+* [Sandisk 256GB micro SD Card](https://www.amazon.com/SanDisk-256GB-microSDXC-Memory-Adapter/dp/B0758NHWS8)
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-To get a local copy up and running follow these simple steps.
+Follow each steps carefully.
 
-### Prerequisites
+### Step 1 - Installing Operating System Images
 
-This is an example of how to list things you need to use the software and how to install them.
+1. Download [Raspbian Buster with desktop and recommended software](https://www.raspberrypi.org/downloads/raspbian/) image file.
+2. Format SD Card. Here I used [SD Card Formatter](https://www.sdcard.org/downloads/formatter/) software to format the SD Card.
+3. Write image on SD Card. Here, I used [Win32 Disk Imager](https://sourceforge.net/projects/win32diskimager/) to write image on SD Card. 
+4. Once SD Card image writing is completed, insert it to Raspberry Pi 4 and power up. 
+
+
+### Step 2 - VNC Remote Access Setup 
+* Run following commands to install VNC
+```sh
+sudo apt-get update && apt-get upgrade -y
+sudo apt install -y realvnc-vnc-server realvnc-vnc-viewer
+```
+* Enable VNC from configuration 
+ ```sh
+sudo raspi-config
+# Select 5 Interfacing Options 
+# Select P3 VNC
+# Yes to Would you like the VNC Server to be enabled? 
+```
+* Install [VNC Viewer](https://www.realvnc.com/en/connect/download/viewer/) on the client PC to have remote access to Raspberry Pi 4
+
+
+### Step 3 - SNMP Service Setup
+* Install SNMP 
+```sh
+sudo apt-get update && sudo apt-get -y upgrade
+sudo apt-get install -y snmp snmp-mibs-downloader
+sudo apt-get update
+sudo apt-get install -y snmpd
+```
+* Follow following steps to configure your snmp.conf 
+```sh
+# Open SNMP configuration file
+sudo nano /etc/snmp/snmpd.conf
+# Comment out agentAddress udp:127.0.0.1:161
+# Open agentAddress udp:161,udp6:[::1]:161
+```
+
+
+### Installation
+ 
 * npm
 ```sh
 npm install npm@latest -g
 ```
 
-### Installation
- 
+
 1. Clone the repo
 ```sh
 git clone https://github.com/github_username/repo.git
