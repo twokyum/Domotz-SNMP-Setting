@@ -20,13 +20,15 @@
   <a href="https://github.com/twokyum/MonIT.git">
     <img src="images/CACTI_LOGO.png" alt="CactiLogo" width="200" height="80">
   </a>
-
+   
   <h1 align="center">System Monitoring Setup Guideline</h3>
 
   <p align="center">
     <h2 align="center">Network Monitoring with SNMP <br/> & <br/> CT/AC/Temperature Real-Time Monitoring</h2>  
-    
-    <!-- <a href="https://github.com/github_username/repo"><strong>Explore the docs »</strong></a>
+  </br>
+  </br>
+<!--     
+    <a href="https://github.com/github_username/repo"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://github.com/github_username/repo">View Demo</a>
