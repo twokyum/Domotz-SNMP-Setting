@@ -27,9 +27,9 @@
   <h1 align="center">System Monitoring Setup Guideline</h3>
 
   <p align="center">
-    <h2>** Network Monitoring with SNMP <br/>** CT/AC/Temperature Real-Time Monitoring</h2>  
+    <h2>** Network Monitoring with SNMP <br/>** CT/AC/Temperature Real-Time Monitoring </br></h2>  
   </br>
-  </br>
+  
 <!--     
     <a href="https://github.com/github_username/repo"><strong>Explore the docs »</strong></a>
     <br />
@@ -92,7 +92,7 @@ Follow each steps carefully.
 ### <strong>Step 1 - Installing Operating System Images</strong>
 
 1. Download [Raspbian Buster with desktop and recommended software](https://www.raspberrypi.org/downloads/raspbian/) image file.
-2. Format SD Card. Here I used [SD Card Formatter](https://www.sdcard.org/downloads/formatter/) software to format the SD Card.
+2. Format SD Card. Here, I used [SD Card Formatter](https://www.sdcard.org/downloads/formatter/) software to format the SD Card.
 3. Write image on SD Card. Here, I used [Win32 Disk Imager](https://sourceforge.net/projects/win32diskimager/) to write image on SD Card. 
 4. Once SD Card image writing is completed, insert it to Raspberry Pi 4 and power up. 
 
