@@ -27,7 +27,7 @@
   <h1 align="center">System Monitoring Setup Guideline</h3>
 
   <p align="center">
-    <h2 align="center">Network Monitoring with SNMP <br/> & <br/> CT/AC/Temperature Real-Time Monitoring</h2>  
+    <h2>** Network Monitoring with SNMP <br/>**CT/AC/Temperature Real-Time Monitoring</h2>  
   </br>
   </br>
 <!--     
