@@ -81,7 +81,7 @@ Here's a blank template to get started:
 
 Follow each steps carefully.
 
-### Step 1 - Installing Operating System Images
+### <strong>Step 1 - Installing Operating System Images</strong>
 
 1. Download [Raspbian Buster with desktop and recommended software](https://www.raspberrypi.org/downloads/raspbian/) image file.
 2. Format SD Card. Here I used [SD Card Formatter](https://www.sdcard.org/downloads/formatter/) software to format the SD Card.
@@ -89,7 +89,7 @@ Follow each steps carefully.
 4. Once SD Card image writing is completed, insert it to Raspberry Pi 4 and power up. 
 
 
-### Step 2 - VNC Remote Access Setup 
+### <strong> Step 2 - VNC Remote Access Setup</strong> 
 * Run following commands to install VNC
 ```sh
 sudo apt-get update && apt-get upgrade -y
@@ -105,7 +105,7 @@ sudo raspi-config
 * Install [VNC Viewer](https://www.realvnc.com/en/connect/download/viewer/) on the client PC to have remote access to Raspberry Pi 4
 
 
-### Step 3 - SNMP Service Setup
+### <strong>Step 3 - SNMP Service Setup</strong>
 * Install SNMP 
 ```sh
 sudo apt-get update && sudo apt-get -y upgrade
@@ -117,12 +117,18 @@ sudo apt-get install -y snmpd
 ```sh
 # Open SNMP configuration file
 sudo nano /etc/snmp/snmpd.conf
-# Comment out agentAddress udp:127.0.0.1:161
-# Open agentAddress udp:161,udp6:[::1]:161
+# 1. Comment [agentAddress udp:127.0.0.1:161]
+# 2. Instead, open [agentAddress udp:161,udp6:[::1]:161]
+# 3. Add [rocommunity public  youripaddress] to allow IPs to collect SNMP values
+# 4. Open [trap2sink   localhost public] for active monitoring
+# 5. Add following line at the end of config file to setup OID for temperature
+#    sensor value [pass .1.3.6.1.2.1.25.1.7.1 /bin/sh /home/pi/Desktop/temp_snmp.sh #    -g]
 ```
 
+### <strong>Step 4 - </strong>
 
-### Installation
+
+<!-- ### Installation
  
 * npm
 ```sh
@@ -137,7 +143,7 @@ git clone https://github.com/github_username/repo.git
 2. Install NPM packages
 ```sh
 npm install
-```
+``` -->
 
 
 
