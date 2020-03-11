@@ -21,7 +21,7 @@
     <img src="images/CACTI_LOGO.png" alt="CactiLogo" width="150" height="80">
   </a>
    <a href="https://github.com/twokyum/MonIT.git">
-    <img src="images/SPLUNKFWD_LOGO.PNG" alt="SplunkLogo" width="150" height="80">
+    <img src="images/SPLUNKFWD_LOGO.png" alt="SplunkLogo" width="150" height="80">
   </a> 
    
   <h1 align="center">System Monitoring Setup Guideline</h3>
