@@ -1,23 +1,3 @@
-<!--
-*** Thanks for checking out this README Template. If you have a suggestion that would
-*** make this better, please fork the repo and create a pull request or simply open
-*** an issue with the tag "enhancement".
-*** Thanks again! Now go create something AMAZING! :D
-***
-***
-***
-*** To avoid retyping too much info. Do a search and replace for the following:
-*** github_username, repo, twitter_handle, email
--->
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
 
 <!-- [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
@@ -38,23 +18,18 @@
     <img src="images/RPI4_Logo.jpg" alt="DomotzLogo" width="200" height="80">
   </a>
 
-  <h3 align="center">System Monitoring Setup Guideline</h3>
+  <h1 align="center">System Monitoring Setup Guideline</h3>
 
   <p align="center">
-    Network Monitoring with SNMP 
-    <br />
-    &
-    <br />
-    CT/AC/Temperature Real-Time Monitoring
-    <br />
-    <a href="https://github.com/github_username/repo"><strong>Explore the docs »</strong></a>
+    <h2 align="center">Network Monitoring with SNMP <br/> & <br/> CT/AC/Temperature Real-Time Monitoring</h2>  
+    <!-- <a href="https://github.com/github_username/repo"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://github.com/github_username/repo">View Demo</a>
     ·
     <a href="https://github.com/github_username/repo/issues">Report Bug</a>
     ·
-    <a href="https://github.com/github_username/repo/issues">Request Feature</a>
+    <a href="https://github.com/github_username/repo/issues">Request Feature</a> -->
   </p>
 </p>
 
@@ -79,19 +54,21 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+[SCT013_IMG]: images/SCT013_IMG.jfif
+[PRICT7V1_IMG]: images/RPICT7V1_IMG.jfif
+[RPICT3T1_IMG]: images/RPICT3T1_IMG.jpg
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
+This project is your guideline for real-time system monitoring setup. 
 Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`github_username`, `repo`, `twitter_handle`, `email`
+<!-- **To avoid retyping too much info. Do a search and replace with your text editor for the following:** -->
 
 
 ### Built With
 
-* []()
-* []()
-* []()
+* [![RPICT7V1 Module][PRICT7V1_IMG]](http://lechacalshop.com/gb/internetofthing/22-raspberrypi-7x-current-sensor-adaptor-1-voltage-emoncms.html) RPICT7V1 - 7 Current Sensor & 1 AC Sensor 
+* [![RPICT3T1 Module][RPICT3T1_IMG]](http://lechacalshop.com/gb/internetofthing/22-raspberrypi-7x-current-sensor-adaptor-1-voltage-emoncms.html) RPICT3T1 - 3 Current Sensor & 1 Temperature Sensor 
+* [![Current Sensor][SCT013_IMG]](http://lechacalshop.com/gb/internetofthing/16-sct-013-000-with-quality-jack-connector-emoncms-emonwrt.html) SCT013 - Current Sensor 
+
 
 
 
@@ -192,3 +169,6 @@ Project Link: [https://github.com/github_username/repo](https://github.com/githu
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
 [product-screenshot]: images/screenshot.png
+[SCT013-IMG]: images/SCT013_IMG.jfif
+[PRICT7V1_IMG]: images/RPICT7V1_IMG.jfif
+[RPICT3T1_IMG]: images/RPICT3T1_IMG.jpg
