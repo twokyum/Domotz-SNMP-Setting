@@ -12,14 +12,17 @@
 <br />
 <p align="center">
   <a href="https://github.com/twokyum/MonIT.git">
-    <img src="images/RPI4_Logo.jfif" alt="RPI4LOGO" width="200" height="80">
+    <img src="images/RPI4_Logo.jfif" alt="RPI4LOGO" width="150" height="80">
   </a>
   <a href="https://github.com/twokyum/MonIT.git">
-    <img src="images/Domotz_Logo.jfif" alt="DomotzLogo" width="200" height="80">
+    <img src="images/DOMOTZ_LOGO.jfif" alt="DomotzLogo" width="150" height="80">
   </a>
   <a href="https://github.com/twokyum/MonIT.git">
-    <img src="images/CACTI_LOGO.png" alt="CactiLogo" width="200" height="80">
+    <img src="images/CACTI_LOGO.png" alt="CactiLogo" width="150" height="80">
   </a>
+   <a href="https://github.com/twokyum/MonIT.git">
+    <img src="images/SPLUNKFWD_LOGO.png" alt="SplunkLogo" width="150" height="80">
+  </a> 
    
   <h1 align="center">System Monitoring Setup Guideline</h3>
 
