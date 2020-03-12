@@ -146,6 +146,7 @@ sudo dpkg -i domotz-raspberry-armhf-1.0-2.5.0-2.7.5-b004-0023.deb
 
 
 ### <strong> Step 5 - Serial Read Setup </strong>
+* Following commands will cover the steps to setup a RPI for reading CSV stream for RPICT series board.
 ```sh
 sudo raspi-config
 #Select 7 Advanced Options --> A1 Expand Filesystem 
@@ -159,6 +160,9 @@ sudo apt-get install -y python-serial
 wget lechacal.com/RPICT/tools/lcl-rpict-config.py.zip
 unzip lcl-rpict-config.py.zip
 sudo cp lcl-rpict-config.py /usr/local/bin
+#Insert the RPICT board on the RPI. Configure and read from serial port.
+stty -F /dev/ttyAMA0 raw speed 38400
+cat /dev/ttyAMA0
 ```
 ### <strong> Step 6 - MKDIR for Temp Sensor Value </strong>
 ```sh
