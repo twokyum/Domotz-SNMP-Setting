@@ -165,6 +165,14 @@ stty -F /dev/ttyAMA0 raw speed 38400
 cat /dev/ttyAMA0
 ```
 ### <strong> Step 6 - MKDIR for Temp Sensor Value </strong>
+1. When you are wiring "DS18B20" on "RPICT3T1" board, make sure to wire accordingly Red-VCC | Yellow-DIN | Black-Ground
+<p align="left">
+  <a href="https://github.com/twokyum/MonIT.git">
+    <img src="images/TEMPWIRE.jpg" alt="TempWire" width="150" height="80">
+  </a>
+</p>
+
+* Following code will create folder and file to store temperature sensor values.
 ```sh
 #Create folder to store temperature.log files
 sudo mkdir /usr/local/bin/Logging_Data
