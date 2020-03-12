@@ -109,8 +109,9 @@ sudo raspi-config
 # Select 5 Interfacing Options 
 # Select P3 VNC
 # Yes to Would you like the VNC Server to be enabled? 
+# Select OK and Finish
 ```
-* Install [VNC Viewer](https://www.realvnc.com/en/connect/download/viewer/) on the client PC to have remote access to Raspberry Pi 4
+* Install [VNC Viewer](https://www.realvnc.com/en/connect/download/viewer/) on the client PC to have remote access to Raspberry Pi 4 --> Once VNC Viewer is downloaded, create new connection --> Insert IP Address, login ID & PW
 
 
 ### <strong>Step 3 - SNMP Service Setup</strong>
@@ -134,8 +135,9 @@ sudo nano /etc/snmp/snmpd.conf
 ```
 
 ### <strong> Step 4 - Domotz Agent Setup on Raspberry Pi </strong>
-* Create Domotz Agent account at [Domotz Webpage](https://portal.domotz.com/signup?utm_source=domotz&utm_medium=website&utm_campaign=setup-step1). Keep in mind that Domotz Pro subscription only provides 21 days of free trial. 
+* Create Domotz Agent account at [Domotz Webpage](https://portal.domotz.com/signup?utm_source=domotz&utm_medium=website&utm_campaign=setup-step1) (Keep in mind that Domotz Pro subscription only provides 21 days of free trial). 
 * Install Domotz Agent on Raspberry Pi by running the following commands. 
+* Once installation is completed, go to web browser and type in htts://youripaddress:3000, and then log in with your account.
 ```sh
 sudo apt-get update && sudo apt-get -y upgrade
 wget https://portal.domotz.com/download/agent_packages/domotz-raspberry-armhf-1.0-2.5.0-2.7.5-b004-0023.deb
@@ -143,7 +145,7 @@ sudo dpkg -i domotz-raspberry-armhf-1.0-2.5.0-2.7.5-b004-0023.deb
 ```
 
 
-### <strong> Step 5 - Serial Read Setup & MKDIR for Temp Sensor Value </strong>
+### <strong> Step 5 - Serial Read Setup </strong>
 ```sh
 sudo raspi-config
 #Select 7 Advanced Options --> A1 Expand Filesystem 
