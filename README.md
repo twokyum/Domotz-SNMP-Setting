@@ -166,11 +166,16 @@ cat /dev/ttyAMA0
 ```
 ### <strong> Step 6 - MKDIR for Temp Sensor Value </strong>
 1. When you are wiring "DS18B20" on "RPICT3T1" board, make sure to wire accordingly Red-VCC | Yellow-DIN | Black-Ground
-<p align="left">
+<p align="LEFT">
   <a href="https://github.com/twokyum/MonIT.git">
-    <img src="images/TEMPWIRE.jpg" alt="TempWire" width="200" height="200">
+    <img src="images/TEMPWIRE.jpg" alt="TempWire" width="300" height="200">
+  </a>
+  <a href="https://github.com/twokyum/MonIT.git">
+    <img src="images/31SENSOR.jpg" alt="SENSOR" width="300" height="200">
   </a>
 </p>
+
+2. 
 
 * Following code will create folder and file to store temperature sensor values.
 ```sh
