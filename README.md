@@ -168,7 +168,7 @@ cat /dev/ttyAMA0
 1. When you are wiring "DS18B20" on "RPICT3T1" board, make sure to wire accordingly Red-VCC | Yellow-DIN | Black-Ground
 <p align="left">
   <a href="https://github.com/twokyum/MonIT.git">
-    <img src="images/TEMPWIRE.jpg" alt="TempWire" width="150" height="80">
+    <img src="images/TEMPWIRE.jpg" alt="TempWire" width="200" height="200">
   </a>
 </p>
 
