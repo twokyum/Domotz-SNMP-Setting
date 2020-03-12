@@ -164,22 +164,19 @@ sudo cp lcl-rpict-config.py /usr/local/bin
 stty -F /dev/ttyAMA0 raw speed 38400
 cat /dev/ttyAMA0
 ```
-### <strong> Step 6 - MKDIR for Temp Sensor Value </strong>
-1. When you are wiring "DS18B20" on "RPICT3T1" board, make sure to wire accordingly Red-VCC | Yellow-DIN | Black-Ground
-<p align="LEFT">
+### <strong> Step 6 - DOMOTZ Eyes with Custom OIDs - Temperature Sensor Setup  </strong>
+1. Wire "DS18B20" on "RPICT3T1" boar. Make sure to wire as following "Red-VCC | Yellow-DIN | Black-Ground"
+<p align="center">
   <a href="https://github.com/twokyum/MonIT.git">
     <img src="images/TEMPWIRE.jpg" alt="TempWire" width="300" height="200">
   </a>
-  <a href="https://github.com/twokyum/MonIT.git">
-    <img src="images/31SENSOR.jpg" alt="SENSOR" width="300" height="200">
-  </a>
 </p>
 
-2. 
+2. Create a folder and a file where to store temperature sensor values. I set file and folder permission to 777 to avoid permission errors. 
 
-* Following code will create folder and file to store temperature sensor values.
 ```sh
 #Create folder to store temperature.log files
+sudo mv ~/MonIT/Temperature\ Sensor/readTemp.py ~/Desktop/
 sudo mkdir /usr/local/bin/Logging_Data
 sudo chmod 777 /usr/local/bin/Logging_Data
 cd /usr/local/bin/Logging_Data
@@ -188,6 +185,7 @@ sudo touch temperature.log
 sudo chmod 777 /usr/local/bin/Logging_Data/temperature.log
 sudo reboot & exit
 ```
+3. Run readTemp.py file in your Desktop folder. 
 
 
 ### <strong> Step 7 - Cacti Install and Setup</strong>
