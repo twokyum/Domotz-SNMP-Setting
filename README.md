@@ -254,9 +254,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Shawn Park - skp1202@gmail.com 
+* Shawn Park - skp1202@gmail.com 
 
-Project Link - [https://github.com/twokyum/MonIT](https://github.com/twokyum/MonIT)
+* Project Link - [https://github.com/twokyum/MonIT](https://github.com/twokyum/MonIT)
 
 
 ## References
