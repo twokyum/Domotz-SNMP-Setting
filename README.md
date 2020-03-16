@@ -165,7 +165,7 @@ stty -F /dev/ttyAMA0 raw speed 38400
 cat /dev/ttyAMA0
 ```
 ### <strong> Step 6 - DOMOTZ Eyes with Custom OIDs - Temperature Sensor Setup  </strong>
-1. Wire "DS18B20" on "RPICT3T1" boar. Make sure to wire as following "Red-VCC | Yellow-DIN | Black-Ground"
+1. Wire "DS18B20" on "RPICT3T1" board. Make sure to wire as the image below - "Red-VCC | Yellow-DIN | Black-Ground"
 <p align="left">
   <a href="https://github.com/twokyum/MonIT.git">
     <img src="images/TEMPWIRE.jpg" alt="TempWire" width="300" height="200">
@@ -256,7 +256,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Shawn Park - skp1202@gmail.com 
 
-Project Link: [https://github.com/twokyum/MonIT](https://github.com/twokyum/MonIT)
+Project Link - [https://github.com/twokyum/MonIT](https://github.com/twokyum/MonIT)
 
 
 ## References
