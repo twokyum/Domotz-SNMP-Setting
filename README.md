@@ -131,11 +131,11 @@ sudo nano /etc/snmp/snmpd.conf
 - Uncomment [agentAddress udp:161,udp6:[::1]:161]
 - Add [rocommunity public  clientIPaddress] after [rocommunity public  localhost] for full access from the local host
 - Uncomment [trap2sink   localhost public] for active monitoring
-- Add following line at the end of config file to setup OID for sensor value 
-Temp --> pass .1.3.6.1.2.1.25.1.7.1 /bin/sh /home/pi/Desktop/temp_snmp.sh -g
-CT1 --> pass .1.3.6.1.2.1.25.1.7.2 /bin/sh /home/pi/Desktop/ct1_snmp.sh -g
-CT2 --> pass .1.3.6.1.2.1.25.1.7.3 /bin/sh /home/pi/Desktop/ct2_snmp.sh -g
-CT3 --> pass .1.3.6.1.2.1.25.1.7.4 /bin/sh /home/pi/Desktop/ct3_snmp.sh -g
+- Add following lines at the end of config file to setup OIDs for sensor values 
+TempValue --> pass .1.3.6.1.2.1.25.1.7.1 /bin/sh /home/pi/Desktop/temp_snmp.sh -g
+Current1 --> pass .1.3.6.1.2.1.25.1.7.2 /bin/sh /home/pi/Desktop/ct1_snmp.sh -g
+Current2 --> pass .1.3.6.1.2.1.25.1.7.3 /bin/sh /home/pi/Desktop/ct2_snmp.sh -g
+Current3 --> pass .1.3.6.1.2.1.25.1.7.4 /bin/sh /home/pi/Desktop/ct3_snmp.sh -g
 ```
 
 ### <strong> Step 4 - Domotz Agent Setup on Raspberry Pi </strong>
@@ -200,6 +200,16 @@ sudo apt-get install -y cacti
 #To access Cacti, open web browser and go to "localhost/cacti"
 ```
 
+### <strong> Step 8 - Splunk Forwarder Installation and Setup</strong>
+```sh
+tar -zxvf splunkforwarder-8.0.2-a7f645ddaf91-Linux-arm.tgz
+sudo mv splunkforwarder /opt
+cd /opt/splunkforwarder/bin
+./splunk start
+
+#Yes to the agreement 
+#Login to Splunk Server and open the port for incoming traffic from the forwarder
+```
 
 <!-- ### Installation
  
